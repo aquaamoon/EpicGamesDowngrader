@@ -10,18 +10,19 @@ if ([bool](([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -m
     exit
 }
 
-Write-Host -BackgroundColor red "Downloading Legendary, please wait..."
+Write-Host -BackgroundColor green "Downloading Legendary, please wait..."
 
 # Download Legendary
 curl.exe -LO https://github.com/whichtwix/legendary/releases/latest/download/legendary.exe
 
 # This gives Legendary access to the Epic account, this is needed to download the game
-.\legendary auth --import
+Write-Host -BackgroundColor green "Copy paste authorization code from browser here:"
+.\legendary auth --disable-webview
 
 # we have to do this first so the base url can populate as even putting it as a argument later is not enough
 .\legendary install 963137e4c29d4c79a81323b8fab03a40 --abort-if-any-installed
 
-Invoke-WebRequest -Uri https://github.com/whichtwix/Data/raw/master/epic/manifests/963137e4c29d4c79a81323b8fab03a40_2025.9.9.manifest -UseBasicParsing -OutFile auman.manifest
+Invoke-WebRequest -Uri https://github.com/whichtwix/Data/raw/master/epic/manifests/963137e4c29d4c79a81323b8fab03a40_2026.3.31.manifest -UseBasicParsing -OutFile auman.manifest
 
 .\legendary install 963137e4c29d4c79a81323b8fab03a40 --manifest auman.manifest -y
 
