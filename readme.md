@@ -10,20 +10,8 @@ This repository contains a PowerShell script that allows **Epic Games players** 
 
 The script uses the third-party tool [**Legendary**](https://github.com/derrod/legendary) to download and install Among Us through Epic Games.
 
----
-
-## Usage
-
-**1.** Download **`DowngradeEpic.ps1`** and keep it in your Downloads folder.
-
-**2.** Right-click the file and select **Run with PowerShell**.
-
-**3.** Follow the prompts provided by **Legendary** to authenticate your Epic Games account.
-
-**4.** Once the script has finished, follow the instructions provided to launch Among Us using **EpicGamesStarter**.
-
 > [!WARNING]
-> Do **not** run the script as Administrator. The script must be run as a normal Windows user.
+> Do not run the script as Administrator. The script must be run as a normal Windows user.
 
 ---
 
