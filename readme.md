@@ -1,37 +1,181 @@
-# Downgrade tool for Among Us
+<h1 align="center">Epic Games Downgrader</h1>
 
-this repository contains a script that is used by epic players to download a older version of among us during times when mods are uncompatible
-with the latest version of the game. The third party tool [legendary](https://github.com/derrod/legendary) is used.
+<p align="center">
+  Forked from <a href="https://github.com/whichtwix/EpicGamesDowngrader">@whichtwix's EpicGamesDowngrader</a>.
+</p>
 
-# Common issues
+---
 
-1. The script may sometimes not create EpicGamesStarter.exe or it may not work due to your computer environment
-   <br> Solution:
-      - Download the exe from [here](https://github.com/whichtwix/EpicGamesStarter/releases/latest). <br>
-      - If it does not work download the cmd file in the releases tab, place that with the legendary.exe, use that to start the game.
-2. The script may instantly close.
-   <br> Solution:
-    - search powershell in your windows search bar and open it <br>
-    - navigate to the folder the script is in, by doing for example ```cd downloads``` or ```cd desktop``` <br>
-    - write ```Set-ExecutionPolicy Unrestricted -Scope Process``` and click enter <br>
-    - write ```./DowngradeEpic.ps1``` and click enter <br>
-3. "Access to the path '<>' is denied" / "No write access to '<>' ".
-   <br> solution: If the error mentions Legendary.exe it means it cannot find the file and it likely wasnt able to be downloaded. Install it manually [here](https://github.com/derrod/legendary/releases/latest).
-   If it mentions the path it is installing Among us to you may have to do this:
-     - open legendary.exe from the folder the script is
-     - write ```legendary uninstall 963137e4c29d4c79a81323b8fab03a40 --keep-files``` and click enter
-     - retry the powershell script
-4. Variations of "Invalid credentials, Please login again".
-   <br> Solution:
-     - open legendary.exe from the folder the script is
-     - write ```legendary auth --delete``` and click enter
-     - write ```legendary auth``` and click enter
-5. "the game `963137e4c29d4c79a81323b8fab03a40` could not be found, did you spell it correctly?"
-   <br> Solution:
-     - the current signed in account does not have Among Us then which may occur from having multiple epic accounts
-     - follow guidance from number 4 above and login to the account that has the game
-6. "curl (35)Next initializeSecurityContext failed" or similar
-   <br> Solution:
-     - Anitivirus is blocking a download so turning it off will fix it
+This repository contains a PowerShell script that allows **Epic Games players** to install a specific version of **Among Us** when an older version is required for mod compatibility.
 
-Extra Note: number 3 may also occur because of antivirus quarantining legendary so you may want to turn it off temporarily if youve tried downloading it manually
+The script uses the third-party tool [**Legendary**](https://github.com/derrod/legendary) to download and install Among Us through Epic Games.
+
+---
+
+## Usage
+
+**1.** Download **`DowngradeEpic.ps1`** and keep it in your Downloads folder.
+
+**2.** Right-click the file and select **Run with PowerShell**.
+
+**3.** Follow the prompts provided by **Legendary** to authenticate your Epic Games account.
+
+**4.** Once the script has finished, follow the instructions provided to launch Among Us using **EpicGamesStarter**.
+
+> [!WARNING]
+> Do **not** run the script as Administrator. The script must be run as a normal Windows user.
+
+---
+
+## Common Issues & Troubleshooting
+
+<details>
+<summary><b>EpicGamesStarter was not downloaded or does not work.</b></summary>
+
+<br>
+
+**Solutions:**
+
+* Download the latest `EpicGamesStarter.exe` from the [EpicGamesStarter releases](https://github.com/whichtwix/EpicGamesStarter/releases/latest).
+* If EpicGamesStarter still does not work, download the `.cmd` file from the releases page.
+* Place the `.cmd` file in the same folder as `Legendary.exe` and use it to launch the game.
+
+</details>
+
+<details>
+<summary><b>PowerShell instantly closes.</b></summary>
+
+<br>
+
+**Solutions:**
+
+1. Open **PowerShell** manually.
+
+2. Navigate to your Downloads folder:
+
+   ```powershell
+   cd Downloads
+   ```
+
+3. Allow scripts to run for the current PowerShell session:
+
+   ```powershell
+   Set-ExecutionPolicy Unrestricted -Scope Process
+   ```
+
+4. Run the script:
+
+   ```powershell
+   .\DowngradeEpic.ps1
+   ```
+
+Running the script this way will keep the PowerShell window open so that any error messages can be seen.
+
+</details>
+
+<details>
+<summary><b>"curl (35) schannel: next InitializeSecurityContext failed" or similar.</b></summary>
+
+<br>
+
+This error is commonly caused by antivirus or security software blocking the downgrader or one of the files it is attempting to download.
+
+**Solution:**
+
+1. Download the **DowngradeEpic.ps1** and keep it in your Downloads folder.
+2. Open PowerShell and enter the following
+   
+   ```text
+   cd downloads
+   ```
+
+      ```text
+   Set-ExecutionPolicy Unrestricted -Scope Process
+   ```
+
+      ```text
+   .\DowngradeEpic.ps1
+   ```
+3. It will ask if you want to run the script. Type **R** and enter. The downgrade process should then run and open a downgraded version in ```C:\Users\YOURNAME\Games\AmongUs```.
+</details>
+
+
+<details>
+<summary><b>"Access to the path '&lt;&gt;' is denied" / "No write access to '&lt;&gt;'".</b></summary>
+
+<br>
+
+**Solutions:**
+
+* If the error mentions **`Legendary.exe`**, Legendary may not have downloaded correctly. Download it manually from the [Legendary releases](https://github.com/derrod/legendary/releases/latest) and place it in the same folder as the PowerShell script.
+
+* If the error mentions the folder where Among Us is being installed:
+
+  * Open `Legendary.exe` from the folder containing the script.
+  * Run:
+
+     ```text
+     legendary uninstall 963137e4c29d4c79a81323b8fab03a40 --keep-files
+     ```
+
+  * Close Legendary.
+  * Run the PowerShell script again.
+
+</details>
+
+<details>
+<summary><b>"Invalid credentials, Please login again" or similar.</b></summary>
+
+<br>
+
+**Solutions:**
+
+1. Open `Legendary.exe` from the folder containing the script.
+
+2. Run:
+
+   ```text
+   legendary auth --delete
+   ```
+
+3. Authenticate again:
+
+   ```text
+   legendary auth
+   ```
+
+4. Once authentication is complete, run the PowerShell script again.
+
+</details>
+
+<details>
+<summary><b>"The game 963137e4c29d4c79a81323b8fab03a40 could not be found, did you spell it correctly?"</b></summary>
+
+<br>
+
+This usually means that the Epic Games account currently authenticated with Legendary does not have Among Us in its library.
+
+This can happen if you have multiple Epic Games accounts.
+
+**Solution:**
+
+1. Follow the authentication steps above.
+2. Log in to the Epic Games account that owns Among Us.
+3. Run the PowerShell script again.
+
+</details>
+
+---
+
+## Need Help?
+
+> [!TIP]
+> If you're having problems with the downgrader or need help getting your mod working, please join the [Town of Us Discord](https://discord.gg/ugyc4EVUYZ) and make a support ticket!
+
+---
+
+## Credits
+
+* **[whichtwix](https://github.com/whichtwix)** — Original EpicGamesDowngrader.
+* **[EpicGamesStarter](https://github.com/whichtwix/EpicGamesStarter)** — Used to launch the Epic Games installation.
+* **[Legendary](https://github.com/derrod/legendary)** — Epic Games launcher used to download the game.
