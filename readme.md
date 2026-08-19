@@ -158,7 +158,7 @@ This can happen if you have multiple Epic Games accounts.
 ## Need Help?
 
 > [!TIP]
-> If you're having problems with the downgrader or need help getting your mod working, please join the [Town of Us Discord](https://discord.gg/ugyc4EVUYZ) and make a support ticket!
+> If you're having problems with the downgrader, please join the [Town of Us Discord](https://discord.gg/ugyc4EVUYZ) and make a support ticket!
 
 ---
 
