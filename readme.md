@@ -6,7 +6,7 @@
 
 ---
 
-This repository contains a PowerShell script that allows **Epic Games players** to install a specific version of **Among Us** when an older version is required for mod compatibility. The script uses the third-party tool [**Legendary**](https://github.com/derrod/legendary) to download and install Among Us through Epic Games.
+This repository contains a PowerShell script that allows **Epic Games players** to install a specific version of *Among Us* when an older version is required for mod compatibility. The script uses the third-party tool [**Legendary**](https://github.com/derrod/legendary) to download and install *Among Us* through **Epic Games**.
 
 This version does not include **EpicGamesStarter** as it is resulting in false positive antivirus flags. It is highly recommended to use [**Heroic Games Launcher**](https://heroicgameslauncher.com/) to launch the game instead.
 
