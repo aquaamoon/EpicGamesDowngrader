@@ -43,6 +43,8 @@ Running the script this way will keep the PowerShell window open so that any err
 
 </details>
 
+<br/>
+
 <details>
 <summary><b>"curl (35) schannel: next InitializeSecurityContext failed" or similar.</b></summary>
 
@@ -69,6 +71,7 @@ This error is commonly caused by antivirus or security software blocking the dow
 3. It will ask if you want to run the script. Type **R** and enter. The downgrade process should then run and open a downgraded version in ```C:\Users\YOURNAME\Games\AmongUs```.
 </details>
 
+<br/>
 
 <details>
 <summary><b>"Access to the path '&lt;&gt;' is denied" / "No write access to '&lt;&gt;'".</b></summary>
@@ -103,6 +106,8 @@ This error is commonly caused by antivirus or security software blocking the dow
 
 </details>
 
+<br/>
+
 <details>
 <summary><b>"Invalid credentials, Please login again" or similar.</b></summary>
 
@@ -127,6 +132,8 @@ This error is commonly caused by antivirus or security software blocking the dow
 4. Once authentication is complete, run the PowerShell script again.
 
 </details>
+
+<br/>
 
 <details>
 <summary><b>"The game 963137e4c29d4c79a81323b8fab03a40 could not be found, did you spell it correctly?"</b></summary>
