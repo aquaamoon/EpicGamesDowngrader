@@ -8,7 +8,7 @@
 
 This repository contains a PowerShell script that allows **Epic Games players** to install a specific version of *Among Us* when an older version is required for mod compatibility. The script uses the third-party tool [**Legendary**](https://github.com/derrod/legendary) to download and install *Among Us* through **Epic Games**.
 
-This version does not include **EpicGamesStarter** as it is resulting in false positive antivirus flags. It is highly recommended to use [**Heroic Games Launcher**](https://heroicgameslauncher.com/) to launch the game instead.
+This version **does not include the EpicGamesStarter**. It is highly recommended to use [**Heroic Games Launcher**](https://heroicgameslauncher.com/) to launch the game instead. Installation guides can be found [here](https://au-avengers.github.io/docs.toum.gg/docs/install/windows/Epic%20Games).
 
 ---
 
@@ -22,7 +22,7 @@ This version does not include **EpicGamesStarter** as it is resulting in false p
 
 <br>
 
-**Solutions:**
+**Solution:**
 
 1. Download the latest [**DowngradeEpic.ps1**](https://github.com/aquaamoon/EpicGamesDowngrader/releases/latest) manually.
 
@@ -43,7 +43,8 @@ Running the script this way will keep the PowerShell window open so that any err
 
 </details>
 
-<br/>
+<br> 
+
 
 <details>
 <summary><b>"curl (35) schannel: next InitializeSecurityContext failed" or similar.</b></summary>
@@ -113,7 +114,7 @@ This error is commonly caused by antivirus or security software blocking the dow
 
 <br>
 
-**Solutions:**
+**Solution:**
 
 1. Open `Legendary.exe` from the folder containing the script.
 
